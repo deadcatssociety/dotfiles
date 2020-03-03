@@ -15,6 +15,8 @@ set encoding=UTF-8
 set nocompatible " 호환성 무시. 안해주면 대부분 플러그인이 설치가 안됨
 set nofixeol " EOL을 vim이 고치지 못하게 함
 
+set mouse=a " 모든 모드에서 마우스 사용
+
 set backspace+=indent,eol,start " 백스페이스 사용
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab
 set cindent autoindent smartindent
