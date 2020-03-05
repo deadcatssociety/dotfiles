@@ -86,10 +86,19 @@ call plug#begin('$VIM/plugged')
 
 call plug#end()
 
+" Pathogen
+"call pathogen#infect()
+"syntax on
+"filetype plugin indent on
+
 " Theme
 syntax enable
 set background=dark
 colorscheme solarized
+
+" Nerdtree
+let NERDTreeShowHidden=1
+
 
 """""""""""""""
 " vimwiki
@@ -115,7 +124,7 @@ nmap <LocalLeader>wt :VimwikiTable<CR>
 " 위키 파일 위치
 let g:vimwiki_list = [
     \{
-    \   'path': '/Volumes/Untitled/git/vimwiki',
+    \   'path': '/Volumes/Untitled/git/vimwiki', #'path': '~/vimwiki', iVim
     \   'ext' : '.md',
     \   'diary_rel_path': '.',
     \}
