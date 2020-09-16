@@ -73,7 +73,7 @@ call plug#begin('$VIM/plugged')
 
   " View
   Plug 'luochen1990/rainbow' " 괄호를 level 별로 다르게 색칠
-  Plug 'altercation/vim-colors-solarized' " 컬러스킴
+  Plug 'morhetz/gruvbox' " 컬러스킴
   Plug 'mhinz/vim-startify' " 시작 화면을 꾸며준다. MRU가 있어 편리하다
   
   " Plug ‘plasticboy/vim-markdown’ " 마크다운
@@ -88,13 +88,16 @@ call plug#end()
 
 " Pathogen
 "call pathogen#infect()
-"syntax on
+" Syntax Highlighting
+if has(“syntax”)
+    syntax on
+endif
 "filetype plugin indent on
 
 " Theme
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 
 " Nerdtree
 let NERDTreeShowHidden=1
