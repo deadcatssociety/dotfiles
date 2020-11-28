@@ -2,8 +2,8 @@
 "" Basic
 """""""""""""""
 if has("gui_macvim")
-  set macmeta
-  "set guifont=Meslo\ LG\ S\ DZ\ Regular\ Nerd\ Font\ Complete:h14
+  set macmeta " Option키를 메타 키로
+  "set guifont=Meslo\ LG\ S\ DZ\ Regular\ Nerd\ Font\ Complete:h14 " 폰트 설정
 
   " macVim 에서 esc 로 영문변환, imi 는 1 또는 2 로 설정해준다
   set noimd
@@ -18,19 +18,27 @@ set nofixeol " EOL을 vim이 고치지 못하게 함
 set mouse=a " 모든 모드에서 마우스 사용
 
 set backspace+=indent,eol,start " 백스페이스 사용
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab
+set softtabstop=4
+set shiftwidth=4
+set expandtab " 탭 문자 대신 스페이스
+set tabstop=4 " 스페이스 갯수
+set smarttab
 set cindent autoindent smartindent
-set langmap=ㅁa,ㅠb,ㅊc,ㅇd,ㄷe,ㄹf,ㅎg,ㅗh,ㅑi,ㅓj,ㅏk,ㅣl,ㅡm,ㅜn,ㅐo,ㅔp,ㅂq,ㄱr,ㄴs,ㅅt,ㅕu,ㅍv,ㅈw,ㅌx,ㅛy,ㅋz
+set langmap=ㅁa,ㅠb,ㅊc,ㅇd,ㄷe,ㄹf,ㅎg,ㅗh,ㅑi,ㅓj,ㅏk,ㅣl,ㅡm,ㅜn,ㅐo,ㅔp,ㅂq,ㄱr,ㄴs,ㅅt,ㅕu,ㅍv,ㅈw,ㅌx,ㅛy,ㅋz " 한글 문자 매핑
 set splitbelow
 set splitright
 set virtualedit=block   " visual block mode를 쓸 때 문자가 없는 곳도 선택 가능
 set autoread
-set list listchars=tab:·\ ,trail:·,extends:>,precedes:<
-set smartcase ignorecase hlsearch incsearch
+set list listchars=tab:·\ ,trail:·,extends:>,precedes:< " 공백 문자 등을 보여줌
+set smartcase
+set ignorecase " 검색 할 때 대소문자 무시
+set hlsearch " 검색 할 때 문자 하이라이팅
+set incsearch " 글자 칠 때 마다 서치
 set nopaste " 붙여넣기 할 때 인덴트 유지
 
-set noswapfile
-set nobackup
+set noswapfile " 편집 할 때 스왑 파일 만들지 않음
+set nobackup " 덮어 쓸 때 백업 파일 만들지 않음
+set history=10000 " 히스토리 버퍼 크기
 
 """""""""""""""
 "" View
@@ -39,8 +47,9 @@ set nu " 라인넘버 표시
 set ruler " 커서 좌표 표시
 set laststatus=2 " 상태바를 언제나 표시
 set showmatch " 일치하는 괄호 하이라이팅
-set cursorline " highlight current line
-set lazyredraw " redraw only when we need to.
+set cursorline " 현재 커서 라인 하이라이팅
+set lazyredraw " 매크로 실행 될 때 까지 화면 갱신 안함
+set title " 제목 표시
 
 """"""""""""""""""""
 "" Plugin Settings
